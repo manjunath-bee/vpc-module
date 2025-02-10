@@ -1,9 +1,9 @@
 variable "cidr_block" {
-  
+ 
 }
 
 variable "instance_tenancy" {
-  
+ 
 }
 
 variable "enable_dns_hostnames" {
@@ -11,7 +11,7 @@ variable "enable_dns_hostnames" {
   }
 
 variable "env" {
-
+ 
 
 }
 
@@ -26,6 +26,7 @@ variable "gw_tags" {
 
 variable "public_cidr_block" {
    type= list 
+   
    validation {
     condition     = length(var.public_cidr_block) == 2
     error_message = "max select only two"
@@ -38,7 +39,8 @@ variable "public_subnet_tags" {
 }
 
 variable "private_cidr_block" {
-   type= list 
+   type= list
+   
    validation {
     condition     = length(var.private_cidr_block) == 2
     error_message = "max select only two"
@@ -52,6 +54,7 @@ variable "private_subnet_tags" {
 
 variable "database_cidr_block" {
    type= list 
+  
    validation {
     condition     = length(var.database_cidr_block) == 2
     error_message = "max select only two"
